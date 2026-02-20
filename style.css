@@ -253,8 +253,18 @@ img {
   min-width: 0;
 }
 
+.callout-content h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
 .callout-content p {
-  margin: 0;
+  margin: 0.3rem 0 0 0;
+}
+
+.callout-content p:first-of-type {
+  margin-top: 0;
 }
 
 .callout-blue {
@@ -374,12 +384,19 @@ table.data-table .highlight-row td:first-child {
 /* --- Columns --- */
 .columns {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .column {
-  flex: 1;
+  flex: 1 1 260px;
   min-width: 0;
+}
+
+/* Callouts inside columns: stack icon above content */
+.column .callout {
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* --- Toggles / Accordions --- */
